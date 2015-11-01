@@ -1,0 +1,46 @@
+<!-- Напишите функцию delay(f, ms), которая возвращает обёртку вокруг f, задерживающую вызов на ms миллисекунд.
+
+Например:
+
+function f(x) {
+  alert( x );
+}
+
+var f1000 = delay(f, 1000);
+var f1500 = delay(f, 1500);
+
+f1000("тест"); // выведет "тест" через 1000 миллисекунд
+f1500("тест2"); // выведет "тест2" через 1500 миллисекунд
+Упрощённо можно сказать, что delay возвращает «задержанный на ms» вариант f.
+
+В примере выше у функции только один аргумент, но delay должна быть универсальной: передавать
+любое количество аргументов и контекст this. -->
+
+
+
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+<html>
+    <title></title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+    'use strict';
+
+    function f(){
+      console.log('hello!');
+    }
+
+    function delay (func, delayTime){
+      var timer = setTimeout( console.log('123'), delayTime );
+    }
+
+    console.log( delay( f, 5000 ) );
+
+
+    </script>
+
+  </body>
+</html>

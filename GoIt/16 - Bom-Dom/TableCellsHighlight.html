@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head></head>
+
+<style>
+  table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  td{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+  }
+</style>
+
+<html>
+  <body>
+
+      <table>
+        <caption>TEST CAPTION</caption>
+        <tr>
+          <th>first</th>
+          <th>second</th>
+          <th>third</th>
+          <th>fourth</th>
+        </tr>
+
+        <tr>
+          <td>1:1</td>
+          <td>1:2</td>
+          <td>1:3</td>
+          <td>1:4</td>
+        </tr>
+
+        <tr>
+          <td>2:1</td>
+          <td>2:2</td>
+          <td>2:3</td>
+          <td>2:4</td>
+        </tr>
+
+        <tr>
+          <td>3:1</td>
+          <td>3:2</td>
+          <td>3:3</td>
+          <td>3:4</td>
+        </tr>
+
+        <tr>
+          <td>4:1</td>
+          <td>4:2</td>
+          <td>4:3</td>
+          <td>4:4</td>
+        </tr>
+
+      </table>
+
+      <script>
+        'use strict';
+
+        var tableCells = document.getElementsByTagName('td');
+        console.log(tableCells);
+        for (var i=0; i<tableCells.length; i+=5){
+          tableCells[i].style.backgroundColor = 'red';
+        }
+
+
+      </script>
+
+  </body>
+</html>
