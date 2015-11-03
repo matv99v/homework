@@ -1,23 +1,7 @@
-var ladder = {
-  step: 0,
-  up: function() { // вверх по лестнице
-    this.step++;
-    return this;
-  },
-  down: function() { // вниз по лестнице
-    this.step--;
-    return this;
-  },
-  showStep: function() { // вывести текущую ступеньку
-    console.log( this.step );
-  }
-};
+'use strict';
 
+function sumArgs() {
+  return arguments.reduce( function(a,b) {return a+b;} )
+}
 
-// ladder.up();
-// ladder.up();
-// ladder.up();
-// ladder.down();
-// ladder.showStep();
-
-ladder.up().up().up().down().showStep();
+console.log( sumArgs(1,2,3) );
