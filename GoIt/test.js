@@ -1,7 +1,16 @@
-'use strict';
+function Human(name, surname, gender) {
 
-function sumArgs() {
-  return arguments.reduce( function(a,b) {return a+b;} )
+    this.gender = gender;
+
+    function getFullName() {
+        return name + ' ' + surname + ' ' + gender;
+    }
+
+    this.intorduce = function () {
+        console.log( 'Hello, I am ' + getFullName.call(this) );
+    }
 }
 
-console.log( sumArgs(1,2,3) );
+
+var Bob = new Human('Bob', 'Dylan', 'male');
+Bob.intorduce();
