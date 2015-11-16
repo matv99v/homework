@@ -45,21 +45,17 @@
 
       <!-- Hello Comment! -->
 
-      <input id='hider' type='button' value='press me to hide textbelow!' />
-      <h1 id='text' >Hide me please<h1>
+      <input id='hider' type='button' value='press me to hide me!' />
 
 
       <script>
-      var flag = false;
-    function change (){
-        flag = !flag;
-        flag
-        ? document.getElementById('text').style.display = 'none'
-        : document.getElementById('text').style.display = 'block';
+            var hider = document.getElementById('hider');
 
-    }
+            function change (){
+                hider.style.display = 'none';
+            }
 
-    document.getElementById('hider').addEventListener('click', change);
+            hider.addEventListener('click', change);
 
       </script>
 

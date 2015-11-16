@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+<style>
+    #triangle-closed, #triangle-opened{
+        cursor: pointer;
+    }
+</style>
+
+<body>
+
+  <span id='triangle-closed'>▶</span>
+  <span id='triangle-opened'>▼</span>
+  <span>Сладости (нажми меня)!</span>
+  <ul id='menu'>
+    <li>Торт</li>
+    <li>Пончик</li>
+    <li>Пирожное</li>
+  </ul>
+
+
+  <script>
+
+
+    var trO = document.getElementById('triangle-opened');
+    var trC = document.getElementById('triangle-closed');
+    var menu = document.getElementById('menu');
+    console.log( trO, trC, menu);
+
+    trO.style.display = 'none';
+    menu.style.display = 'none';
+
+
+    var flag = false;
+    function operate() {
+        flag = !flag;
+        if (flag) {
+            trC.style.display = 'none';
+            trO.style.display = 'inline-block';
+            menu.style.display = 'block';
+        }
+        else {
+            trC.style.display = 'inline-block';
+            trO.style.display = 'none';
+            menu.style.display = 'none';
+
+        }
+    }
+
+    trO.addEventListener('click', operate);
+    trC.addEventListener('click', operate);
+
+
+  </script>
+
+
+</body>
+
+</html>
