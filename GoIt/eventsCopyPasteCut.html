@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset="utf-8">
+		<title>Document</title>
+	</head>
+	<body>
+
+		<input id='myInput'>hello!</input>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+		<script>
+			var el = $('#myInput');
+
+			el.on('copy', function(){
+				console.log('yes! copy!');
+			});
+
+			el.on('paste', function(){
+				console.log('yes! paste!');
+			});
+
+			el.on('cut', function(){
+				console.log('yes! cut!');
+			});
+		</script>
+
+
+	</body>
+</html>
